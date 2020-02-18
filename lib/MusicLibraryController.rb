@@ -23,6 +23,19 @@ class MusicLibraryController
      
      
      end
+     
+     case input
+       when "list songs"
+         list_songs
+       when "list artist"
+         list_artist
+       when "list genres"
+         list_genres
+       when "list genre"
+         list_song_by_genre
+       when "play_song"
+         play_song
+       end
        
     def list_songs
     Song.all.sort{|a, b| a.name <=> b.name}.each_with_index do |s, i|
